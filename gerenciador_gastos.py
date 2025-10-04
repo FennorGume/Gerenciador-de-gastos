@@ -113,12 +113,21 @@ while True:
     # Editando os gastos
     if edit_gasto:
         os.system('cls')
+        # escolhendo_catregoria = input(f'Categorias:\n \n1. Moradia \n2. Alimento \n3. Assinaturas \n')
+
+        # categoria = categorias[escolhendo_catregoria]
+        # escolhida = vendo_gastos(categoria)
+
+        # for item in escolhida:
+        #     print(f'{item}')
 
     # Adicionando saldo extra
     if add_saldo:
         os.system('cls')
         print('Adicione saldo extra/ganhos adicionais.\n')
         qnt_adicionar = float(input(f'Quando gostaria de adicionar? '))
-        saldo_extra(qnt_adicionar)
+        adicionado = saldo_extra(qnt_adicionar)
+        salario_liquido = salario_liquido + adicionado
         print(f'Saldo extra adicionado com exito. \033[32m+R${qnt_adicionar:.2f}\033[0m ')
+        print(f'Seu salario total agora é R${salario_liquido}')
         input('')
